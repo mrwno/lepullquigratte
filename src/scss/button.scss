@@ -1,0 +1,43 @@
+div{
+  border-radius: 60.5px;
+  width: 150px;
+  height: 35px;
+
+  &.button1{
+    background: #273477;
+  }
+
+  &.button2{
+    background: #D3352D;
+  }
+
+  &.discover{
+    position: absolute;
+    left: 45%;
+    bottom: 4%;
+  }
+
+  &.parrainer{
+    margin-top: 3%;
+    border-radius: 60.5px;
+    width: 150px;
+    height: 35px;
+    margin-left: 40%;
+    p{
+      color: white;
+      margin-left: 0px;
+      text-decoration: none;
+
+    }
+
+  p a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+  p{
+    padding-top: 2%;
+  }
+
+}
