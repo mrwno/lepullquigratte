@@ -26,6 +26,13 @@
   src: local('Didot'), url('font/Linotype-Didot-Initials.woff') format('woff');
 }
 
+@font-face {
+  font-family: 'Avenir LT Std 65 Black';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Avenir LT Std 65 Black'), url('font/AvenirLTStd-Black.woff') format('woff');
+}
+
 body{
   font-family: 'Avenir LT Std 55 Roman';
   line-height: 1.52
@@ -33,6 +40,13 @@ body{
 
 h1{
   font-family: 'Didot';
+  font-size: 28px;  
+  text-align: center;
+}
+
+
+h2{
+  font-family: 'Avenir LT Std 65 Black';
   font-size: 28px;  
   text-align: center;
 }
@@ -55,10 +69,14 @@ p{
       margin-top: 35%;
       margin-left: 15%;
       margin-bottom: 3%;
+
     }
     h1,.text{
       margin-left: 15%;
       width: 500px;
+    }
+    .text{
+      text-align: justify;
     }
     img.pull1{
       width: 80%;
@@ -77,6 +95,7 @@ p{
   background-size: cover;
   padding-top: 15%;
   p{
+    text-align: justify;
     margin-top: 2%;
     margin-left: 25%;
     width: 50%;
@@ -88,32 +107,11 @@ p{
   img{
     width: 400px;
     height: 500px;
-    border: 4px;
-    border-color: red;
+    border-radius: 10px;
   }
-  .big{
-    height: 75vh;
-    width: 100vw;
-    display: flex;
-  }
-  .big:nth-last-child(){
-    flex-direction: row-reverse;
-  }
-  .small{
+  .big .small,.big2 .small{
     width: 50vw;
-    
-    &:nth-child(1) img{
-      position: relative;
-      bottom: 0;
-      right: 0;
-    }
-
-    &:nth-last-child() img{
-      position: relative;
-      top: 0;
-      left: 0;
-    }
-
+    height: 75vh;
     h1{
       margin-top:20%;
     }
@@ -121,6 +119,108 @@ p{
       width: 500px;
       margin-left: 15%;
       text-align: justify;
+    }
+  }
+  .big{
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+
+    .small.s1 {
+      z-index: 2;
+      img{
+        margin-top: 70px;
+        margin-left: 45%;
+        transition: 0.3s;
+
+        &:hover{
+          width: 450px;
+          height: 550px;
+          border-color: white;
+          border-width: 5px;
+          cursor: url('../assets/pointer1.cur'), pointer; 
+        }
+      }
+    }
+  }
+
+  .big2{
+    height: 75vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row-reverse;
+    .small.s1 {
+      z-index: 1;
+      img{
+        margin-top: -50px;
+        margin-left: -50px;
+        transition: 0.3s;
+        &:hover{
+          width: 450px;
+          height: 550px;
+          border-color: white;
+          border-width: 5px;
+          cursor: url('../assets/pointer2.cur'), pointer; 
+        }
+      }
+      &:hover{
+        z-index: 3;
+      }
+    }
+  }
+}
+
+
+.section4{
+  width: 100vw;
+  height: 50vh;
+  background-image: url('../assets/cover3.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  padding-top: 15%;
+  margin-bottom: 3%;
+  p{
+    text-align: justify;
+    margin-top: 2%;
+    margin-left: 25%;
+    width: 50%;
+  }
+}
+
+.section5{
+  margin-top: 3%;
+  width: 100vw;
+  height: 90vh;
+  display: flex;
+
+  .big{
+    width: 33.33vw;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    .small{
+      width: 100%;
+      &.s1{
+        margin-left:9%;
+        height: 62vh;
+        img{
+        height: 437px;
+        width: 370px;
+        border-radius: 10px;
+        transition: 0.3s;
+          &:hover{
+            height: 450px;
+            width: 380px;
+          }
+        }
+      }
+      .button1{
+        margin-left: 32%;
+      }
+    }
+    &.s1{
+      margin-top: 5%;
     }
   }
 }

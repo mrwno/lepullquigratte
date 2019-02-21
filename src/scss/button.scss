@@ -2,7 +2,7 @@ div{
   border-radius: 60.5px;
   width: 150px;
   height: 35px;
-
+  transition: 0.3s;
   &.button1{
     background: #273477;
   }
@@ -15,6 +15,21 @@ div{
     position: absolute;
     left: 45%;
     bottom: 4%;
+
+    p a {
+      text-decoration: none;
+      color: white;
+    }
+
+    &:hover{
+      position: absolute;
+      left: 44%;
+      bottom: 3%;
+      width: 170px;
+      height: 40px;
+      background: #182253;
+      padding-top: 5px;
+    }
   }
 
   &.parrainer{
@@ -23,21 +38,22 @@ div{
     width: 150px;
     height: 35px;
     margin-left: 40%;
+
     p{
       color: white;
       margin-left: 0px;
       text-decoration: none;
 
     }
-
-  p a {
-    text-decoration: none;
-    color: white;
+    &:hover{
+      width: 170px;
+      height: 40px;
+      background: #182253;
+      padding-top: 5px;
+    }
   }
-}
 
   p{
     padding-top: 2%;
   }
-
 }

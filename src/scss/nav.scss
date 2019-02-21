@@ -1,16 +1,16 @@
 
-header{
+#up{
   width: 100vw;
   height: 100vh;
   background-image: url('../assets/cover.png');
   background-repeat: no-repeat;
   background-size: cover;
   color: white;
-
+  scroll-behavior: smooth;
+  overflow-y: scroll;
   nav{
     display: flex;
     font-size: 25px;
-
     div{
       width: 50vw;
 
@@ -23,23 +23,70 @@ header{
         list-style-type: none;
         margin: 1.7%;
         overflow: hidden;
-      }
 
-      li {
-        float: right;
-        width: 25%;
-        text-align: center;
-        color: black;
+        li {
+          float: right;
+          width: 25%;
+          text-align: center;
+          color: black;
+          transition: 0.2s;
+          &.active {
+            color: rgb(209, 45, 37);
+          }
 
-        &.active {
-          color: rgb(209, 45, 37);
+          &:hover{
+            color: rgb(209, 45, 37);
+            font-size: 28px;          
+          }
+
         }
-      }
-      
-      li a {
-        display: block;
-        text-decoration: none;
+        
+        li a {
+          display: block;
+          text-decoration: none;
+        }
       }
     }
   }
 }
+
+
+footer{
+  width: 100vw;
+  height: 10vh;
+  nav{
+    width: 100vw;
+    display: flex;
+    font-size: 20px;
+      ul{
+        width: 65vw;
+        list-style-type: none;
+        margin: 1.7%;
+        overflow: hidden;
+        li {
+          float: right;
+          width: 24%;
+          text-align: center;
+          color: black;
+          transition: 0.2s;
+          border-right: 1px solid #bbb;
+          &:first-child {
+            border-right: none;
+          }
+          &:hover{
+            color: #273477;
+            font-size: 25px;          
+          }
+          &.up{
+            color: #273477;
+          }
+          a {
+            display: block;
+            text-decoration: none;
+            color: #273477;
+            
+          }
+        }
+      }
+    }
+  }
